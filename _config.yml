@@ -2,7 +2,7 @@ title: Hyde
 email: konstantin.dankov@gmail.com
 description: This is scary, but awesome!
 destination: docs
-baseurl: "su-fe2-hyde" # the subpath of your site, e.g. /blog
+baseurl: "/su-fe2-hyde" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kdankov
 github_username: kdankov
