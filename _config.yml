@@ -2,11 +2,13 @@ title: Hyde
 email: konstantin.dankov@gmail.com
 description: This is scary, but awesome!
 destination: docs
-baseurl: "/su-fe2-hyde" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+# baseurl: "/su-fe2-hyde"
+url: ""
 twitter_username: kdankov
 github_username: kdankov
 
+exclude: [_assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, package-lock.json, README.md]
 # Build settings
 markdown: kramdown
 plugins:

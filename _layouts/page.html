@@ -6,12 +6,28 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
   </head>
   <body>
-    <h1>{{ page.title }}</h1>
-    <section>
+
+    <header class="site-header">
+
+        <h1><a href="/">{{ site.title }}</a></h1>
+
+        {% include navigation.html %}
+
+    </header>
+        
+    <main class="site-content">
+
       {{ content }}
-    </section>
-    <footer>
-      &copy; Hyde by Koko
+      
+    </main>
+
+    <footer class="site-footer">
+
+      <p>&copy; Hyde by Koko</p>
+
+      {% include navigation.html %}
+
     </footer>
+
   </body>
 </html>
