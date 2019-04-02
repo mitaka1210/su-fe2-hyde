@@ -5,7 +5,7 @@ ul.gallery {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+ 
 ul.gallery li {
     flex: 0 1 32%;
     display: block;
