@@ -1,0 +1,12 @@
+body {
+	background: var(--color-main-bgrd);
+}
+
+.site-content {
+	padding: var(--sizing-lt-base);
+}
+
+iframe {
+	width: 100%;
+	margin-bottom: var(--sizing-lt-base);
+}

@@ -2,8 +2,8 @@ title: Hyde
 email: konstantin.dankov@gmail.com
 description: This is scary, but awesome!
 destination: docs
-baseurl: ""
-# baseurl: "/su-fe2-hyde"
+# baseurl: ""
+baseurl: "/su-fe2-hyde"
 url: ""
 twitter_username: kdankov
 github_username: kdankov

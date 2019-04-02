@@ -1,13 +1,3 @@
-:root {
-	--sizing-fs-base: 12px;
-	--sizing-ws-base: 1.5em;
-
-	--sizing-fs-tablet: 14px;
-	--sizing-fs-laptop: 16px;
-	--sizing-fs-desktop: 18px;
-	--sizing-fs-huge: 20px;
-}
-
 * {
 	padding: 0;
 	margin: 0;

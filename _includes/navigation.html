@@ -1,4 +1,4 @@
-<nav class="main-nav">
+<nav class="{{ include.location }}-nav">
     <ul>
         {% for page in site.pages %}
         {% if page.url != '/feed.xml' and page.url != '/' %}
@@ -24,3 +24,4 @@
         {% endfor %}
     </ul>
 </nav>
+<a href="tel:+23234234234234" class="button button-primary">Call us</a>

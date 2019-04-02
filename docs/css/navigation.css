@@ -1,44 +1,67 @@
-.main-nav {
-    background: #666;
+nav {
+
 }
 
-.main-nav ul {
+nav ul {
     padding: 0;
     margin: 0;
 }
 
-.main-nav > ul {
+nav > ul {
     display: flex;
 }
 
-.main-nav li {
+nav li {
     display: block;
     list-style: none outside; 
     position: relative;  
+    padding: 0 0.5em;
 }
 
-.main-nav a {
+nav > ul ul li {
+    opacity: 0;
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+    transition: opacity 0.2s ease-in, -webkit-transform 0.2s ease-out;
+    transition: opacity 0.2s ease-in, transform 0.2s ease-out;
+    transition: opacity 0.2s ease-in, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+    padding-top: 0.5em;
+}
+
+/*
+ * Header Navigation styling
+ */
+
+.header-nav {
+    margin-right: auto;
+}
+
+.header-nav li {
+}
+
+.header-nav a {
     display: block;
     padding: 0.5em 1em;
     text-decoration: none;
     color: #FFF;
-    background: #333;
+    background: rgba(0,0,0,0.5);
     transition: background 0.3s ease-in;
+    border-radius: 0.3em;
     outline: none;
 }
 
-.main-nav a:focus,
-.main-nav a:hover {
+.header-nav a:focus,
+.header-nav a:hover {
     background: #900;
 }
 
-.main-nav a:focus {
+.header-nav a:focus {
     text-decoration: underline;
 }
 
 /* Level 2 */
 
-.main-nav > ul ul {
+.header-nav > ul ul {
     display: block;
     position: absolute;
     top: 100%;
@@ -51,30 +74,37 @@
     /* box-shadow: 0 0.3em 0.6rem 0.15rem rgba(0, 0, 0, 0.3); */
 }
 
-.main-nav li:hover > ul {
+.header-nav li:hover > ul {
     pointer-events: all;
 }
-
-.main-nav > ul ul li {
-    opacity: 0;
-    -webkit-transform: translateY(-2rem);
-            transform: translateY(-2rem);
-    transition: opacity 0.2s ease-in, -webkit-transform 0.2s ease-out;
-    transition: opacity 0.2s ease-in, transform 0.2s ease-out;
-    transition: opacity 0.2s ease-in, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
-}
     
-.main-nav li:hover > ul > li {
+.header-nav li:hover > ul > li {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
 }
 
-.main-nav li:hover > ul > li:nth-child(2) { transition-delay: 0.08s; }
-.main-nav li:hover > ul > li:nth-child(3) { transition-delay: 0.16s; }
-.main-nav li:hover > ul > li:nth-child(4) { transition-delay: 0.24s; }
-.main-nav li:hover > ul > li:nth-child(5) { transition-delay: 0.32s; }
+.header-nav li:hover > ul > li:nth-child(2) { transition-delay: 0.08s; }
+.header-nav li:hover > ul > li:nth-child(3) { transition-delay: 0.16s; }
+.header-nav li:hover > ul > li:nth-child(4) { transition-delay: 0.24s; }
+.header-nav li:hover > ul > li:nth-child(5) { transition-delay: 0.32s; }
 
-.main-nav > ul ul a {
+.header-nav > ul ul a {
     padding: 1em 2.5em 1em 1em;
+}
+
+
+/*
+ * Footer Navigation styling
+ */
+.footer-nav {
+    padding-bottom: 2rem;
+}
+
+.footer-nav + .button {
+    display: none;
+}
+
+.footer-nav ul ul {
+    display: none;
 }

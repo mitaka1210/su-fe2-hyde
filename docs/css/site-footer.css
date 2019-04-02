@@ -1,6 +1,6 @@
 .site-footer {
     border-top: var(--sizing-basic-border) solid var(--color-basic-border);
-    padding-top: var(--sizing-ws-base);
+    padding: var(--sizing-lt-base);
     font-size: 0.8em;
 }
 
