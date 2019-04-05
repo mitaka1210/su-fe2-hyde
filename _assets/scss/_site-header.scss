@@ -10,6 +10,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+
+    @include bp('tablet') {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .site-header a {
     text-decoration: none;

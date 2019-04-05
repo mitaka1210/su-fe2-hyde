@@ -1,9 +1,10 @@
+<label id="toggle-main-nav-button" for="toggle-main-nav">Menu</label>
 <nav class="{{ include.location }}-nav">
     <ul>
         {% for page in site.pages %}
         {% if page.url != '/feed.xml' and page.url != '/' %}
         <li>
-            <a href="{{ site.baseurl }}/{{ page.url }}">
+            <a href="{{ site.baseurl }}{{ page.url }}">
                 <span class="title">{{ page.title }}</span>
                 <span class="date">{{ page.date | date_to_string }}</span>
             </a>
@@ -11,7 +12,7 @@
                 {% for page in site.pages %}
                 {% if page.url != '/feed.xml' and page.url != '/' %}
                 <li>
-                    <a href="{{ site.baseurl }}/{{ page.url }}">
+                    <a href="{{ site.baseurl }}{{ page.url }}">
                         <span class="title">{{ page.title }}</span>
                         <span class="date">{{ page.date | date_to_string }}</span>
                     </a>
