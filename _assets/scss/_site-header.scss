@@ -7,12 +7,23 @@
     top: 0; left: 0; 
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
 
+    .cta {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 4em;
+
+        .button {
+            padding: 1.5rem 2.5rem;
+        }
+    }
+
     @include bp('tablet') {
-        flex-direction: column;
         align-items: center;
     }
 }
@@ -21,7 +32,6 @@
 }
 
 .site-header .site-title {
-    margin-right: 2rem;
     margin-bottom: 0;
 }
 

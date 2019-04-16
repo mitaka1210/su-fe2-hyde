@@ -32,6 +32,7 @@ nav {
 
 .header-nav {
     margin-right: auto;
+    padding-left: 2rem;
 
     li {
     }
@@ -50,6 +51,7 @@ nav {
         }
     }
 
+    li.current-page > a,
     a:focus,
     a:hover {
         background: #900;
@@ -105,7 +107,15 @@ nav {
 
     @include bp('tablet') {
         width: 100%;
-        padding: 2rem 0;
+        height: 100vh;
+        padding: 12rem;
+        position: fixed;
+        top: 0; left: 0;
+        background: rgba(black, 0.8);
+
+        ul ul li a {
+            padding-left: 3rem;
+        }
 
         @at-root #toggle-main-nav + .site-header & {
             display: none;
@@ -113,15 +123,58 @@ nav {
 
         @at-root #toggle-main-nav:checked + .site-header & {
             display: block;
+            z-index: 2000;
+        }
+
+        @at-root #toggle-main-nav:checked + .site-header {
+
+            .site-title {
+                position: relative;
+                z-index: 9000;
+                pointer-events: none;
+            }
+
+            #toggle-main-nav-button {
+                position: fixed;
+                z-index: 9000;
+                top: 1rem;
+                right: 2rem;
+
+                &:before {
+                    content: '\f00d';
+                }
+            }
+
+        }
+
+        @at-root .site-header .button {
+            margin-top: 2rem;
         }
     }
 }
 
 #toggle-main-nav-button {
     color: #FFF;
+    padding: 1rem 2rem;
+    background: rgba(black, 0.2);
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    &:before {
+        display: inline-block;
+        content: '\f0c9';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
 
     @include bp('tablet') { display: block; }
     @include bp('laptop') { display: none; }
+
+    span {
+        display: none;
+    }
 }
 
 
